@@ -3,26 +3,13 @@ import { Sidenav, Nav, Icon, Input, Dropdown, InputGroup, Loader } from 'rsuite'
 import 'rsuite/dist/styles/rsuite.min.css';
 
 const SideNav = ({course, loaded, searchHandler}) => {
-
-  const styles = {
-    display: 'inline-table',
-    width: 350,
-    marginRight: 10
-  };
   
-  const headerStyles = {
-    padding: 20,
-    background: '#505b60',
-    fontSize: 16,
-    color: ' #fff'
-  };
-
   return (
-    <div style={styles}>
+    <div className="side-nav--wrapper" >
       {!loaded && <Loader backdrop content="loading..." vertical />}
       <Sidenav defaultOpenKeys={['3', '4']}>
         <Sidenav.Header>
-          <div style={headerStyles} icon={<Icon icon="info" />}>
+          <div className="side-nav--header" icon={<Icon icon="info" />}>
             <span>BSB10115</span>
             <p>Certificate I in Business</p> 
           </div>
